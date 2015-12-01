@@ -33,10 +33,10 @@ class Board{
 	}
 	
 	public function go($player, $x, $y){
-		if ($this->state[$x][$y] != "_"){
+		if ($this->state[$y][$x] != "_"){
 			throw new \Exception("Invalid move: $x, $y");
 		}
-		$this->state[$x][$y] = $player;
+		$this->state[$y][$x] = $player;
 	}
 	
 	function canWin($player, $board){
@@ -90,6 +90,6 @@ class Board{
 	}
 	
 	public function boardVal($move){
-		return $this->state[$move->x][$move->y];
+		return $this->state[$move->y][$move->x];
 	}
 }
