@@ -1,3 +1,5 @@
+<?php namespace alanmanderson\TicTacToe\Models;
+
 class Move{
     public $x;
     public $y;
